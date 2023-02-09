@@ -8,10 +8,6 @@ export interface INavLink {
 
 }
 
-export interface IMobileNavLink extends INavLink {
-    setToggle: Dispatch<SetStateAction<boolean>>
-}
-
 export interface ICategory {
     id: number,
     icon: IconType,

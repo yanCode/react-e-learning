@@ -2,7 +2,7 @@ import {navLinks} from 'src/static'
 import {HiMenuAlt1, HiX} from "react-icons/all";
 import React, {useState} from "react";
 import NavLink from 'src/components/Navbar/NavLink';
-import {IMobileNavLink, INavLink} from "src/types";
+import { INavLink} from "src/types";
 import MobileNavLink from "src/components/Navbar/MobileNavLink";
 
 const Navbar = () => {
@@ -27,7 +27,7 @@ const Navbar = () => {
                 fixed h-full bg-Teal w-96 top-0 left-0 z-20 items-center shadow-lg gap-8 py-8
                 text-white flex flex-col justify-center">{
                     navLinks.map((navLink: INavLink) => {
-                        return <MobileNavLink key={navLink.id}  { ...navLink as IMobileNavLink} setToggle={setToggle}/>
+                        return <MobileNavLink key={navLink.id} navLink={navLink} setToggle={setToggle}/>
                     })
                 }
                     <HiX className="absolute right-12 top-12 text-3xl cursor-pointer"
