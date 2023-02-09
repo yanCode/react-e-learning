@@ -18,7 +18,7 @@ import logo3 from "src/assets/logo3.png";
 import logo4 from "src/assets/logo4.png";
 import logo5 from "src/assets/logo5.png";
 import logo6 from "src/assets/logo6.png";
-import {ICategory, INavLink} from "~/types";
+import {ICategory, INavLink} from "src/types";
 
 export const navLinks: INavLink[] = [
     {

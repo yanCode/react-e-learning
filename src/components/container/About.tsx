@@ -1,5 +1,5 @@
 const About = () => (
-    <section className="section">
+    <section className="section" id="about">
         About
     </section>)
 export default About
