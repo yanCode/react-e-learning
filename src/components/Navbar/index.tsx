@@ -1,9 +1,10 @@
 import { navLinks } from 'src/static'
 import { HiMenuAlt1, HiX } from 'react-icons/all'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import NavLink from 'src/components/Navbar/NavLink'
 import { INavLink } from 'src/types'
 import MobileNavLink from 'src/components/Navbar/MobileNavLink'
+import { motion } from 'framer-motion'
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
@@ -25,29 +26,33 @@ const Navbar = () => {
     >
       {/*{navLinks}*/}
       <div>
-        <div className="container mx-auto  py-4 px-2 flex items-center justify-between">
-          <div className="flex items-center  gap-4">
+        <div className={`${active ? 'py-2 transition-all duration-700' : 'py-4'}
+         container mx-auto  px-2 flex items-center justify-between`}>
+          <div className='flex items-center  gap-4'>
             <HiMenuAlt1
-              className="text-3xl sm:hidden cursor-pointer"
+              className='text-3xl sm:hidden cursor-pointer'
               onClick={() => setToggle(!toggle)}
             />
-            <h1 className="text-xl text-Teal uppercase tracking-wide font-bold">
+            <h1 className='text-xl text-Teal uppercase tracking-wide font-bold'>
               Skillex
             </h1>
           </div>
-          <div className=" sm:flex items-center justify-items-center hidden gap-3">
+          <div className=' sm:flex items-center  hidden gap-4'>
             {navLinks.map((navLink: INavLink) => {
               return <NavLink key={navLink.id} {...navLink} />
             })}
           </div>
-          <button className="border border-solid text-sm py-3 px-6 rounded-lg border-gray">
+          <button className='border border-solid text-sm py-3 px-6 rounded-lg border-gray'>
             Sign Up
           </button>
           {toggle && (
-            <div
-              className="
+            <motion.div
+              initial={{ x: -500, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.3 }}
+              className='
                 fixed h-full bg-Teal w-96 top-0 left-0 z-20 items-center shadow-lg gap-8 py-8
-                text-white flex flex-col justify-center"
+                text-white flex flex-col justify-start'
             >
               {navLinks.map((navLink: INavLink) => {
                 return (
@@ -58,11 +63,14 @@ const Navbar = () => {
                   />
                 )
               })}
-              <HiX
-                className="absolute right-12 top-12 text-3xl cursor-pointer"
+              <div className="group absolute right-12 rounded-lg w-8 h-8 top-12 shadow-lg border border-solid border-white
+              p-1 hover:border-gray">
+                <HiX
+                className=' text-3xl cursor-pointer w-[100%] h-[100%] group-hover:text-gray'
                 onClick={() => setToggle((prev) => !prev)}
               />
-            </div>
+              </div>
+            </motion.div>
           )}
         </div>
       </div>
