@@ -1,12 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      Poppins: ["Poppins", "sans-serif"]
+      Poppins: ["Poppins", "sans-serif"],
     },
     extend: {
       colors: {
@@ -14,7 +11,7 @@ module.exports = {
         HummingBird: "#d1f1ee",
         yellow: "#e4d63b",
         Solitude: "#e9e9ea",
-        gray: "#4B4B4C"
+        gray: "#4B4B4C",
       },
       screens: {
         xs: "480px",
@@ -22,17 +19,16 @@ module.exports = {
         md: "1060px",
       },
       animation: {
-        slide: "slide 25s linear infinite"
+        slide: "slide 25s linear infinite",
       },
       keyframes: {
         slide: {
-          "0%,100%": {transform: "translateX(5%)"},
-          "50%": {transform: "translateX(-120%)"}
-        }
-      }
+          "0%,100%": { transform: "translateX(5%)" },
+          "50%": { transform: "translateX(-120%)" },
+        },
+      },
     },
-
   },
 
-  plugins: []
-}
+  plugins: [],
+};
