@@ -51,22 +51,22 @@ export const navLinks: INavLink[] = [
 export const categories: ICategory[] = [
   {
     id: 1,
-    icon: FiPenTool,
+    icon: <FiPenTool/>,
     category: "Design",
   },
   {
     id: 2,
-    icon: FaLaptopCode,
+    icon: <FaLaptopCode/>,
     category: "Development",
   },
   {
     id: 3,
-    icon: BsBarChartLine,
+    icon: <BsBarChartLine/>,
     category: "Business",
   },
   {
     id: 4,
-    icon: MdOutlineScience,
+    icon: <MdOutlineScience/>,
     category: "Science",
   },
 ];
@@ -167,4 +167,4 @@ export const accordions = [
   },
 ];
 
-export type NavLink = (typeof navLinks)[0];
+

@@ -45,7 +45,7 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <div className='md:w-[60%]'>
+        <div className='md:w-[50%]'>
           <img src={hero} alt='' />
         </div>
       </div>
