@@ -17,14 +17,14 @@ const Contact = () => {
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           transition={{ duration: 0.3 }}
-          className="mt-5 rounded-lg"
+          className="mt-5 overflow-hidden rounded-full"
         >
           <input
             type="text"
             placeholder="Enter your email address"
-            className="sm:p-3 p-2 outline-none text-sm shadow-md sm:w-72 w-60"
+            className="sm:p-3 p-2 outline-none text-sm shadow-md sm:w-72 w-60 rounded-l-lg"
           />
-          <button className="text-sm text-white bg-Teal sm:p-3 p-2 shadow-md font-bold">
+          <button className="text-sm text-white bg-Teal sm:p-3 p-2 shadow-md font-bold rounded-r-lg">
             Subscribe
           </button>
         </motion.form>

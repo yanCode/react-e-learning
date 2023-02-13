@@ -27,7 +27,7 @@ const Navbar = () => {
     >
       {/*{navLinks}*/}
       <div>
-        <div className={`${active ? 'py-2 transition-all duration-700' : 'py-4'}
+        <div className= {`py-2 transition-all duration-700
          container mx-auto  px-2 flex items-center justify-between`}>
           <div className='flex items-center  gap-4'>
             <HiMenuAlt1
@@ -43,9 +43,7 @@ const Navbar = () => {
               return <NavLink key={navLink.id} {...navLink} />
             })}
           </div>
-          {/*<button className='border border-solid text-sm py-3 px-6 rounded-lg border-gray'>*/}
-          {/*  Sign Up*/}
-          {/*</button>*/}
+
           <Button variant={'outline'} className="px-6" >Sign UP</Button>
           {toggle && (
             <motion.div
