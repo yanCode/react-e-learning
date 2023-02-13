@@ -1,6 +1,6 @@
 import { IconType } from "react-icons";
 import { ReactElement } from 'react'
-import { courses } from 'src/static'
+import { accordions, courses } from 'src/static'
 
 
 
@@ -16,3 +16,4 @@ export interface ICategory {
   category: string;
 }
 export type ICourse = typeof courses[0]
+export type IAccordion = typeof accordions[0]
