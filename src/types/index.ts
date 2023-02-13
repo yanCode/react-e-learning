@@ -1,7 +1,6 @@
-import { IconType } from "react-icons";
-import { ReactElement } from 'react'
+import { IconType } from 'react-icons'
+import { ComponentPropsWithoutRef, ReactElement } from 'react'
 import { accordions, courses } from 'src/static'
-
 
 
 export interface INavLink {
@@ -15,5 +14,12 @@ export interface ICategory {
   icon: ReactElement;
   category: string;
 }
+
 export type ICourse = typeof courses[0]
 export type IAccordion = typeof accordions[0]
+
+export type ButtonProps = {
+  variant?: 'solid' | 'outline'
+  children: string,
+  className?: string
+} & ComponentPropsWithoutRef<'button'>

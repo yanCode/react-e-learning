@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Button from 'src/components/Button'
 
 const Contact = () => {
   return (

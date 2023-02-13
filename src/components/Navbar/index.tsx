@@ -5,6 +5,7 @@ import NavLink from 'src/components/Navbar/NavLink'
 import { INavLink } from 'src/types'
 import MobileNavLink from 'src/components/Navbar/MobileNavLink'
 import { motion } from 'framer-motion'
+import Button from 'src/components/Button'
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
@@ -42,9 +43,10 @@ const Navbar = () => {
               return <NavLink key={navLink.id} {...navLink} />
             })}
           </div>
-          <button className='border border-solid text-sm py-3 px-6 rounded-lg border-gray'>
-            Sign Up
-          </button>
+          {/*<button className='border border-solid text-sm py-3 px-6 rounded-lg border-gray'>*/}
+          {/*  Sign Up*/}
+          {/*</button>*/}
+          <Button variant={'outline'} className="px-6" >Sign UP</Button>
           {toggle && (
             <motion.div
               initial={{ x: -500, opacity: 0 }}

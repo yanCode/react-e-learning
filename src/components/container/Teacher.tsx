@@ -1,6 +1,7 @@
 import { teacher1, teacher2 } from 'src/assets'
 import { accordions } from 'src/static'
 import Accordion from 'src/components/container/Accordion'
+import Button from 'src/components/Button'
 
 const Teacher = () => {
   return (
@@ -17,9 +18,10 @@ const Teacher = () => {
             deserunt. Magni neque at eos dolore dignissimos fugit repudiandae?
             Aut laudantium asperiores et!
           </p>
-          <button className='py-3 px-4 bg-Teal text-white rounded-lg text-sm font-bold '>
-            Start Teaching
-          </button>
+          {/*<button className='py-3 px-4 bg-Teal text-white rounded-lg text-sm font-bold '>*/}
+          {/*  Start Teaching*/}
+          {/*</button>*/}
+          <Button variant='solid' className='text-Teal'>Start Teaching</Button>
         </div>
         <div className='p-4 md:w-3/4 sm:row-start-1'>
           <img src={teacher1} alt='' />
@@ -35,9 +37,10 @@ const Teacher = () => {
             deserunt. dolore dignissimos fugit repudiandae?
             Aut laudantium asperiores et!
           </p>
-          <button className='py-3 px-4 bg-Teal text-white rounded-lg text-sm font-bold '>
-            Get Started
-          </button>
+          {/*<button className='py-3 px-4 bg-Teal text-white rounded-lg text-sm font-bold '>*/}
+          {/*  Get Started*/}
+          {/*</button>*/}
+          <Button>Get Started</Button>
         </div>
         <div className='p-4 md:w-3/4'>
           <img src={teacher2} alt='' />

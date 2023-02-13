@@ -1,4 +1,5 @@
 import { About as AboutIcon } from 'src/assets'
+import Button from 'src/components/Button'
 
 const About = () => {
   return (
@@ -16,7 +17,8 @@ const About = () => {
           laudantium nemo nobis, officia omnis quam qui repellat, reprehenderit
           saepe sapiente ut voluptate.
         </p>
-        <button className='py-3 px-6 border border-solid border-gray rounded-lg font-bold'>Know More</button>
+        {/*<button className='py-3 px-6 border border-solid border-gray rounded-lg font-bold'>Know More</button>*/}
+      <Button variant={'outline'}>Know More</Button>
       </div>
     </div>
   )

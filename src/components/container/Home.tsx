@@ -1,6 +1,7 @@
 import { hero } from 'src/assets'
 import { logos } from 'src/static'
 import { motion } from 'framer-motion'
+import Button from 'src/components/Button'
 
 const container = {
   hidden: {
@@ -37,12 +38,8 @@ const Home = () => {
             deleniti harum optio quae qui.
           </p>
           <div className='mt-6'>
-            <button className='px-6 py-3 font-bold text-white bg-Teal rounded-lg mr-4 text-sm'>
-              Get Started
-            </button>
-            <button className='px-6 py-3 font-bold border border-gray border-solid rounded-lg text-sm'>
-              Discover
-            </button>
+            <Button className="mr-6">Get Started</Button>
+            <Button variant='outline'>Discover</Button>
           </div>
         </div>
         <div className='md:w-[50%]'>
